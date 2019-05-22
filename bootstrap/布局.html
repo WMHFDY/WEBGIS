@@ -835,7 +835,10 @@
 $("a[class^='id']").each(function(){
 $(this).click(function(i) {
 				for (var j = 1; j <= 7; j++) {
-					if (j == i) {
+					//获取class的name
+					var cls = $(this).prop("className");
+					var clsnm = $(".id"+j).prop("className");
+					if (cls==clsnm ) {
 							$(".elmnt-"+j).css("display","block");
 					} else {
 							$(".elmnt-"+j).css("display","none");
