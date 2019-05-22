@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>登录测试</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+
+</head>
+
+<body>
+    <div>
+        <h5>登录测试</h5>
+        account: <input type="text" name="fname" id="loginNme" />
+        <br/> passward: <input type="text" name="fname" id="loginPwd" />
+        <br/>
+        <input type="button" name="fname" onclick="login()" value="登录"></input>
+    </div>
+    <hr/>
+    <div>
+        <h5>注册测试</h5>
+        account: <input type="text" name="fname" id="registNme" />
+        <br/> passward: <input type="text" name="fname" id="registPwd" />
+        <br/>
+        <input type="button" name="fname" onclick="regist()" value="注册"></input>
+    </div>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        //简单的登录 -  注册demo
+        function login() {
+            var name = document.getElementById("loginNme").value;
+            var pwd = document.getElementById("loginPwd").value;
+
+            $.post("./user/login", {
+                    username: name,
+                    pwd: pwd
+                },
+                function(data, status) {
+                    alert("Data: " + data + "\nStatus: " + status);
+                });
+        }
+
+        //简单的登录 -  注册demo
+        function regist() {
+            var name = document.getElementById("loginNme").value;
+            var pwd = document.getElementById("loginPwd").value;
+
+            $.post("./user/regist", {
+                    username: name,
+                    pwd: pwd
+                },
+                function(data, status) {
+                    alert("Data: " + data + "\nStatus: " + status);
+                });
+        }
+    </script>
+</body>
+
+</html>
