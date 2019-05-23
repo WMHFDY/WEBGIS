@@ -2,126 +2,813 @@
 <html>
 
 <head>
-	<title>主页</title>
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/布局.css">
 	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/main.css">
 	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
 	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<!-- <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script> -->
-	<script src="js/jquery.js">
-	</script>
+
 </head>
 
 <body>
-	<div id="wai">
-		<div class="divleft">
-			<img class="img-circle" src="images/TX.jpg" width="100px" height="100px" />
-			<a class="mya" href="https://blog.csdn.net/wenming111">会飞的鱼@</a>
+	<div class="container">
+		<div class="sc_flex">
+			<div class="row" id="sc_png">
+				<img src="images\SouthDoor.png">
+			</div>
+
+			<div class="row" id="sc_menu">
+				<div class="col-md-12">
+					<ul class="nav nav-pills">
+						<li class="active">
+							<a href="#">首页</a>
+						</li>
+						<li>
+							<a href="http://news.aust.edu.cn">新闻资讯</a>
+						</li>
+						<li>
+							<a href="http://dwxw.aust.edu.cn">信息公开</a>
+						</li>
+						<li>
+							<a href="http://lib.aust.edu.cn">图书资源</a>
+						</li>
+						<li>
+							<a href="http://www.aust.edu.cn/zzjsz.htm">数字校园</a>
+						</li>
+						<li class="dropdown pull-right">
+							<a href="#" data-toggle="dropdown" class="dropdown-toggle">更多<strong class="caret"></strong></a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="http://jjh.aust.edu.cn">教育基金</a>
+								</li>
+								<li>
+									<a href="http://xyw.aust.edu.cn">校友总会</a>
+								</li>
+								<li>
+									<a href="http://www.aust.edu.cn/ggfw1.htm">公共服务</a>
+								</li>
+								<li class="divider">
+								</li>
+								<li>
+									<a href="#http://xljk.aust.edu.cn">心理健康</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
 		</div>
-		<div class="">
-			<div class="box">
-				<ul id="first-list">
-					<li>
-						<span></span>
-						<div class="title">comment #01</div>
-						<div class="info">前期学习</div>
-						<div class="name">- 设计 -</div>
-						<div class="time">
-							<span>Apr, 17<sup>th</sup></span>
-							<span>12:00 AM</span>
-						</div>
+		<div class="carousel slide" id="carousel">
+			<ol class="carousel-indicators">
+				<li class="active" data-slide-to="0" data-target="#carousel"></li>
+				<li data-slide-to="1" data-target="#carousel"></li>
+				<li data-slide-to="2" data-target="#carousel"></li>
+			</ol>
+
+			<div class="carousel-inner">
+				<div class="item active"><img alt="" src="images/校园.jpg" />
+					<div class="carousel-caption" contenteditable="true">
+						<h4>体育</h4>
+						<p>体育（physical education，缩写PE或P.E.），是一种复杂的社会文化现象，它以身体与智力活动为基本手段，根据人体生长发育、技能形成和机能提高等规律，达到促进全面发育、提高身体素质与全面教育水平、增强体质与提高运动能力、改善生活方式与提高生活质量的一种有意识、有目的、有组织的社会活动。</p>
+					</div>
+				</div>
+
+				<div class="item"><img alt="" src="images/红楼.jpg" />
+					<div class="carousel-caption" contenteditable="true">
+						<h4>前苏联红楼</h4>
+
+						<p>红楼1956在打造成成都鼎级圈层文化交流会馆之后，既会保持红楼原有的恢弘大气与红色外墙，内部装饰则
+							以金碧辉煌的西式风格为主，为世界顶级会所的入驻打造奢华气派而又不失低调内敛的氛围。</p>
+					</div>
+				</div>
+
+				<div class="item"><img alt="" src="images/实验室.jpg" />
+					<div class="carousel-caption" contenteditable="true">
+						<h4>实验室</h4>
+
+						<p>实验室（Laboratory）即进行试验的场所。实验室是科学的摇篮，是科学研究的基地，科技发展的源泉，对科技发展起着非常重要的作用。</p>
+					</div>
+				</div>
+			</div>
+			<a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
+				<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="right carousel-control" href="#carousel" role="button" data-slide="next">
+				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
+		</div>
+
+
+
+		<div class="row">
+			<div class="col-md-8">
+				<ul class="nav nav-tabs">
+					<li class="active">
+						<a class="id1" target="_self">周一</a>
 					</li>
 					<li>
-						<span></span>
-						<div class="title">comment #01</div>
-						<div class="info">在师兄的指导下不断的积累知识，加速成长</div>
-						<div class="name">- 知识积累 -</div>
-						<div class="time">
-							<span>Apr, 29<sup>th</sup></span>
-							<span>11:36 AM</span>
-						</div>
+						<a class="id2" target="_self">周二</a>
 					</li>
 					<li>
-						<span></span>
-						<div class="title">comment #02</div>
-						<div class="info">知识来源于实践</div>
-						<div class="name">- 实践 -</div>
-						<div class="time">
-							<span>May, 2<sup>nd</sup></span>
-							<span>02:00 PM</span>
-						</div>
+						<a class="id3" target="_self">周三</a>
 					</li>
 					<li>
-						<span></span>
-						<div class="title">comment #03</div>
-						<div class="info">webgis实践</div>
-						<div class="name">- webgis实践 -</div>
-						<div class="time">
-							<span>MAR, 21<sup>st</sup></span>
-							<span>03:49 PM</span>
-						</div>
+						<a class="id4" target="_self">周四</a>
 					</li>
 					<li>
-						<span></span>
-						<div class="title">summery #03</div>
-						<div class="info">有能拿出手的知识，能实际完成一定难度的项目</div>
-						<div class="name">- 实战 -</div>
-						<div class="time">
-							<span>JUL, 13<sup>rd</sup></span>
-							<span>09:23 AM</span>
-						</div>
+						<a class="id5" target="_self">周五</a>
 					</li>
 					<li>
-						<span></span>
-						<div class="title">comment #04</div>
-						<div class="info">应聘</div>
-						<div class="name">- get offer -</div>
-						<div class="time">
-							<span>JUL, 15<sup>th</sup></span>
-							<span>08:30 PM</span>
+						<a class="id6" target="_self">周六</a>
+					</li>
+					<li>
+						<a class="id7" target="_self">周日</a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-md-4">
+				<ul class="nav nav-tabs">
+					<li class="active">
+						<a class="cd1" target="_self">一</a>
+					</li>
+					<li>
+						<a class="cd2" target="_self">二</a>
+					</li>
+					<li>
+						<a class="cd3" target="_self">三</a>
+					</li>
+					<li>
+						<a class="cd4" target="_self">四</a>
+					</li>
+					<li>
+						<a class="cd5" target="_self">五</a>
+					</li>
+					<li>
+						<a class="cd6" target="_self">六</a>
+					</li>
+					<li>
+						<a class="cd7" target="_self">日</a>
+					</li>
+				</ul>
+			</div>
+
+		</div>
+		<div class="MON">
+			<div class="sldr">
+				<ul class="wrp animate">
+					<li class="elmnt-7" style="width: 823px;">
+						<div class="book small">
+							<a href="http://www.dilidili.name/anime/pokemontyyl/" target="_blank">
+								<figure>
+									<img src="http://www.dilidili.name/uploads/allimg/190411/312_1446436511.jpg" alt="宠物小精灵太阳/月亮">
+									<figcaption>
+										<p>宠物小精灵太阳/月亮</p>
+										<p>第122话</p>
+									</figcaption>
+									<span class="hot">NEW</span>
+								</figure>
+							</a>
+							<a href="http://www.dilidili.name/anime/Fairygone/" target="_blank">
+								<figure>
+									<img src="http://www.dilidili.name/uploads/allimg/190411/312_1440048481.jpg" alt="Fairy gone">
+									<figcaption>
+										<p>Fairy gone</p>
+										<p>第7话</p>
+									</figcaption>
+									<span class="hot">NEW</span>
+								</figure>
+							</a>
+							<a href="http://www.dilidili.name/anime/shiyouzhiguo/"  target="_blank">
+								<figure>
+									<img src="http://www.dilidili.name/uploads/allimg/190417/312_1508407901.jpg" alt="拾又之国">
+									<figcaption>
+										<p>拾又之国</p>
+										<p>第8话</p>
+									</figcaption>
+								</figure>
+							</a><a href="http://www.dilidili.name/anime/xmds/"  target="_blank">
+								<figure>
+									<img src="http://www.dilidili.name/uploads/allimg/190411/312_1440567421.jpg" alt="消灭都市">
+									<figcaption>
+										<p>消灭都市</p>
+										<p>第7话</p>
+
+									</figcaption>
+
+								</figure>
+							</a><a href="http://www.dilidili.name/anime/sydczrgwy/"  target="_blank">
+								<figure>
+									<img src="http://www.dilidili.name/uploads/allimg/190411/312_1442328881.jpg" alt="深夜的超自然公务员">
+									<figcaption>
+										<p>深夜的超自然公务员</p>
+										<p>第7话</p>
+
+									</figcaption>
+
+								</figure>
+							</a><a href="http://www.dilidili.name/anime/ysdy/"  target="_blank">
+								<figure>
+									<img src="http://www.dilidili.name/uploads/allimg/190411/312_1443209321.jpg" alt="一弦定音！">
+									<figcaption>
+										<p>一弦定音！</p>
+										<p>第7话</p>
+
+									</figcaption>
+
+								</figure>
+							</a><a href="http://www.dilidili.name/anime/awgs/"  target="_blank">
+								<figure>
+									<img src="http://www.dilidili.name/uploads/allimg/180927/296_1441364501.jpg" alt="爱玩怪兽">
+									<figcaption>
+										<p>爱玩怪兽</p>
+										<p>第32话</p>
+
+									</figcaption>
+
+								</figure>
+							</a><a href="http://www.dilidili.name/anime/RiderZI/"  target="_blank">
+								<figure>
+									<img src="http://www.dilidili.name/uploads/allimg/180917/296_1844037201.jpg" alt="假面骑士时王">
+									<figcaption>
+										<p>假面骑士时王</p>
+										<p>第36话</p>
+
+									</figcaption>
+
+								</figure>
+							</a><a href="http://www.dilidili.name/anime/fairytail4/"  target="_blank">
+								<figure>
+									<img src="http://www.dilidili.name/uploads/allimg/190411/312_1449419291.jpg" alt="妖精的尾巴最终章">
+									<figcaption>
+										<p>妖精的尾巴最终章</p>
+										<p>第309话</p>
+
+									</figcaption>
+
+								</figure>
+							</a><a href="http://www.dilidili.name/anime/gtl6/"  target="_blank">
+								<figure>
+									<img src="http://www.dilidili.name/uploads/allimg/190411/312_1445589761.jpg" alt="鬼太郎第6期">
+									<figcaption>
+										<p>鬼太郎第6期</p>
+										<p>第56话</p>
+
+									</figcaption>
+
+								</figure>
+							</a><a href="http://www.dilidili.name/anime/vrains/"  target="_blank">
+								<figure>
+									<img src="http://www.dilidili.name/uploads/allimg/190411/312_1444226171.jpg" alt="游戏王VRAINS">
+									<figcaption>
+										<p>游戏王VRAINS</p>
+										<p>第102话</p>
+
+									</figcaption>
+
+								</figure>
+							</a><a href="http://www.dilidili.name/anime/STgzmsn/"  target="_blank">
+								<figure>
+									<img src="http://www.dilidili.name/uploads/allimg/190411/312_1438112421.jpg" alt="Star☆Twinkle光之美少女">
+									<figcaption>
+										<p>Star☆Twinkle光之美少女</p>
+										<p>第16话</p>
+
+									</figcaption>
+
+								</figure>
+							</a>
+						</div>
+					</li>
+					<li class="elmnt-1" style="width: 823px;">
+						<div class="book small">
+							<a href="http://www.dilidili.name/anime/jwjxydej/"  target="_blank">
+								<figure>
+									<img src="http://www.dilidili.name/uploads/allimg/180419/290_1928492502.jpg" alt="叫我僵小鱼 第二季">
+									<figcaption>
+										<p>叫我僵小鱼 第二季</p>
+									</figcaption>
+								</figure>
+							</a>
+							<a href="http://www.dilidili.name/anime/juren3/"  target="_blank">
+								<figure>
+									<img src="http://www.dilidili.name/uploads/allimg/190409/312_1614429751.jpg" alt="进击的巨人第三季Part2">
+									<figcaption>
+										<p>进击的巨人第三季Part2</p>
+										<p>第4话</p>
+
+									</figcaption>
+
+								</figure>
+							</a>
+							<a href="http://www.dilidili.name/anime/ckdnh/"  target="_blank">
+								<figure>
+									<img src="http://www.dilidili.name/uploads/allimg/190409/312_1617406941.jpg" alt="超可动女孩1/6">
+									<figcaption>
+										<p>超可动女孩1/6</p>
+										<p>第7话</p>
+
+									</figcaption>
+
+								</figure>
+							</a>
+							<a href="http://www.dilidili.name/anime/ddsrb/"  target="_blank">
+								<figure>
+									<img src="http://www.dilidili.name/uploads/allimg/190409/312_1620474531.jpg" alt="当地是日本">
+									<figcaption>
+										<p>当地是日本</p>
+
+									</figcaption>
+
+								</figure>
+							</a>
+							<a href="http://www.dilidili.name/anime/bydhgn/"  target="_blank">
+								<figure>
+									<img src="http://www.dilidili.name/uploads/allimg/190409/312_1625232911.jpg" alt="八月的灰姑娘棒球队">
+									<figcaption>
+										<p>八月的灰姑娘棒球队</p>
+										<p>第7话</p>
+
+									</figcaption>
+
+								</figure>
+							</a>
+							<a href="http://www.dilidili.name/anime/slmmpd2/" target="_blank">
+								<figure>
+									<img src="http://www.dilidili.name/uploads/allimg/190409/312_1628398581.jpg" alt="闪亮美妙☆频道第二季">
+									<figcaption>
+										<p>闪亮美妙☆频道第二季</p>
+										<p>第7话</p>
+
+									</figcaption>
+									<span class="hot">NEW</span>
+
+								</figure>
+							</a>
+							<a href="http://www.dilidili.name/anime/whyteacher/"  target="_blank">
+								<figure>
+									<img src="http://www.dilidili.name/uploads/allimg/190409/312_1630561371.jpg" alt="为什么老师会在这里">
+									<figcaption>
+										<p>为什么老师会在这里</p>
+										<p>第7话</p>
+
+									</figcaption>
+
+								</figure>
+							</a>
+							<a href="http://www.dilidili.name/anime/pos2luandun/" target="_blank">
+								<figure>
+									<img src="http://www.dilidili.name/uploads/allimg/190121/298_1739163171.jpg" alt="PSO2乱炖">
+									<figcaption>
+										<p>PSO2乱炖</p>
+										<p>第20话</p>
+
+									</figcaption>
+									<span class="hot">NEW</span>
+
+								</figure>
+							</a>
+							<a href="http://www.dilidili.name/anime/dll/" target="_blank">
+								<figure>
+									<img src="http://www.dilidili.name/uploads/allimg/190409/312_1609293041.jpg" alt="多罗罗">
+									<figcaption>
+										<p>多罗罗</p>
+										<p>第19话</p>
+
+									</figcaption>
+									<span class="hot">NEW</span>
+
+								</figure>
+							</a>
+							<a href="http://www.dilidili.name/anime/nwantf/"  target="_blank">
+								<figure>
+									<img src="http://www.dilidili.name/uploads/allimg/190409/312_1635466281.jpg" alt="南无阿弥陀佛！-莲台 UTENA-">
+									<figcaption>
+										<p>南无阿弥陀佛！-莲台 UTENA-</p>
+										<p>第6话</p>
+
+									</figcaption>
+
+								</figure>
+							</a>
+						</div>
+					</li>
+					<li class="elmnt-2" style="width: 823px;">
+						<div class="book small">
+
+							<!--新番周二--->
+							<a href="http://www.dilidili.name/anime/blackclover/" target="_blank">
+								<figure>
+									<img src="http://www.dilidili.name/uploads/allimg/190409/312_1807114401.jpg" alt="黑色五叶草">
+									<figcaption>
+										<p>黑色五叶草</p>
+										<p>第84话</p>
+
+									</figcaption>
+									<span class="hot">NEW</span>
+
+								</figure>
+							</a><a href="http://www.dilidili.name/anime/zswpact2/" target="_blank">
+								<figure>
+									<img src="http://www.dilidili.name/uploads/allimg/190409/312_1817453491.jpg" alt="钻石王牌actⅡ">
+									<figcaption>
+										<p>钻石王牌actⅡ</p>
+										<p>第8话</p>
+
+									</figcaption>
+									<span class="hot">NEW</span>
+
+								</figure>
+							</a><a href="http://www.dilidili.name/anime/CLIMAXSEASON/" target="_blank">
+								<figure>
+									<img src="http://www.dilidili.name/uploads/allimg/190410/312_1038481691.jpg" alt="偶像大师：灰姑娘女孩剧场 CLIMAX SEASON">
+									<figcaption>
+										<p>偶像大师：灰姑娘女孩剧场 CLIMAX SEASON</p>
+										<p>第8-1话</p>
+
+									</figcaption>
+									<span class="hot">NEW</span>
+
+								</figure>
+							</a><a href="http://www.dilidili.name/anime/YUNO/" target="_blank">
+								<figure>
+									<img src="http://www.dilidili.name/uploads/allimg/190410/312_1042166871.jpg" alt="在世界尽头咏唱恋曲的少女YU-NO">
+									<figcaption>
+										<p>在世界尽头咏唱恋曲的少女YU-NO</p>
+										<p>第燕雀安知话</p>
+
+									</figcaption>
+									<span class="hot">NEW</span>
+
+								</figure>
+							</a><a href="http://www.dilidili.name/anime/ysjscz/" target="_blank">
+								<figure>
+									<img src="http://www.dilidili.name/uploads/allimg/190410/312_1047256871.jpg" alt="异世界四重奏">
+									<figcaption>
+										<p>异世界四重奏</p>
+										<p>第7话</p>
+
+									</figcaption>
+									<span class="hot">NEW</span>
+
+								</figure>
+							</a><a href="http://www.dilidili.name/anime/mhng/"  target="_blank">
+								<figure>
+									<img src="http://www.dilidili.name/uploads/allimg/190410/312_1051373691.jpg" alt="默绘女高">
+									<figcaption>
+										<p>默绘女高</p>
+										<p>第7话</p>
+
+									</figcaption>
+
+								</figure>
+							</a><a href="http://www.dilidili.name/anime/ShinySevenStars/"  target="_blank">
+								<figure>
+									<img src="http://www.dilidili.name/uploads/allimg/190410/312_1057455631.jpg" alt="绫镜少男-Shiny Seven Stars-">
+									<figcaption>
+										<p>绫镜少男-Shiny Seven Stars-</p>
+										<p>第5话</p>
+
+									</figcaption>
+
+								</figure>
+							</a><a href="http://www.dilidili.name/anime/RobiHachi/" target="_blank">
+								<figure>
+									<img src="http://www.dilidili.name/uploads/allimg/190410/312_1059496571.jpg" alt="RobiHachi">
+									<figcaption>
+										<p>RobiHachi</p>
+										<p>第7话</p>
+
+									</figcaption>
+									<span class="hot">NEW</span>
+
+								</figure>
+							</a><a href="http://www.dilidili.name/anime/jdatm/"  target="_blank">
+								<figure>
+									<img src="http://www.dilidili.name/uploads/allimg/181126/296_1735064811.jpg" alt="机动奥特曼">
+									<figcaption>
+										<p>机动奥特曼</p>
+									</figcaption>
+								</figure>
+							</a><a href="http://www.dilidili.name/anime/gaodahuixing/"  target="_blank">
+								<figure>
+									<img src="http://www.dilidili.name/uploads/allimg/190410/312_1105576491.jpg" alt="机动战士高达 THE ORIGIN 诞生 赤色彗星">
+									<figcaption>
+										<p>机动战士高达 THE ORIGIN 诞生 赤色彗星</p>
+										<p>第3话</p>
+									</figcaption>
+								</figure>
+							</a>
+						</div>
+					</li>
+					<li class="elmnt-3 focalPoint" style="width: 823px;">
+						<div class="book small">
+							<!--新番周三--->
+							<a href="http://www.dilidili.name/anime/onepunchman2/" target="_blank">
+								<figure>
+									<img src="http://www.dilidili.name/uploads/allimg/190410/312_1446122261.jpg" alt="一拳超人第二季">
+									<figcaption>
+										<p>一拳超人第二季</p>
+										<p>第7话</p>
+									</figcaption>
+									<span class="hot">NEW</span>
+								</figure>
+							</a><a href="http://www.dilidili.name/anime/dzyzcml/"  target="_blank">
+								<figure>
+									<img src="http://www.dilidili.name/uploads/allimg/190410/312_1429233791.jpg" alt="盾之勇者成名录">
+									<figcaption>
+										<p>盾之勇者成名录</p>
+										<p>第19话</p>
+									</figcaption>
+								</figure>
+							</a><a href="http://www.dilidili.name/anime/CAROLETUESDAY/"  target="_blank">
+								<figure>
+									<img src="http://www.dilidili.name/uploads/allimg/190410/312_1442151591.jpg" alt="CAROLE &amp; TUESDAY">
+									<figcaption>
+										<p>CAROLE &amp; TUESDAY</p>
+										<p>第6话</p>
+									</figcaption>
+								</figure>
+							</a><a href="http://www.dilidili.name/anime/xhyqxhxj/"  target="_blank">
+								<figure>
+									<img src="http://www.dilidili.name/uploads/allimg/190410/312_1440447341.jpg" alt="贤惠幼妻仙狐小姐">
+									<figcaption>
+										<p>贤惠幼妻仙狐小姐</p>
+										<p>第6话</p>
+									</figcaption>
+								</figure>
+							</a><a href="http://www.dilidili.name/anime/xianzhezhisun/"  target="_blank">
+								<figure>
+									<img src="http://www.dilidili.name/uploads/allimg/190410/312_1435399311.jpg" alt="贤者之孙">
+									<figcaption>
+										<p>贤者之孙</p>
+										<p>第6话</p>
+									</figcaption>
+								</figure>
+							</a><a href="http://www.dilidili.name/anime/qzmn501/" target="_blank">
+								<figure>
+									<img src="http://www.dilidili.name/uploads/allimg/190410/312_1447431531.jpg" alt="强袭魔女:501部队出发!">
+									<figcaption>
+										<p>强袭魔女:501部队出发!</p>
+										<p>第7话</p>
+									</figcaption>
+									<span class="hot">NEW</span>
+								</figure>
+							</a>
+						</div>
+					</li>
+					<li class="elmnt-4" style="width: 823px;">
+						<div class="book small">
+							<!--新番周四--->
+							<a href="http://www.dilidili.name/anime/weilaikashen/"  target="_blank">
+								<figure>
+									<img src="http://www.dilidili.name/uploads/allimg/190410/312_1521466861.jpg" alt="未来卡 神之搭档对战">
+									<figcaption>
+										<p>未来卡 神之搭档对战</p>
+
+									</figcaption>
+
+								</figure>
+							</a>
+							<a href="http://www.dilidili.name/anime/ssxz/"  target="_blank">
+								<figure>
+									<img src="http://www.dilidili.name/uploads/allimg/181119/296_1654229321.jpg" alt="松松小镇">
+									<figcaption>
+										<p>松松小镇</p>
+
+									</figcaption>
+
+								</figure>
+							</a>
+							<a href="http://www.dilidili.name/anime/bsgjgcrj/"  target="_blank">
+								<figure>
+									<img src="http://www.dilidili.name/uploads/allimg/190410/312_1536234321.jpg" alt="八十龟酱观察日记">
+									<figcaption>
+										<p>八十龟酱观察日记</p>
+										<p>第7话</p>
+
+									</figcaption>
+
+								</figure>
+							</a>
+							<a href="http://www.dilidili.name/anime/XFLAG/"  target="_blank">
+								<figure>
+									<img src="http://www.dilidili.name/uploads/allimg/190410/312_1526518671.jpg" alt="交锋联盟之机巧一族,交锋联盟">
+									<figcaption>
+										<p>交锋联盟之机巧一族,交锋联盟</p>
+										<p>第14话</p>
+
+									</figcaption>
+
+								</figure>
+							</a><a href="http://www.dilidili.name/anime/oubaoshi/"  target="_blank">
+								<figure>
+									<img src="http://www.dilidili.name/uploads/allimg/190410/312_1540094911.jpg" alt="偶像活动Friends!～闪耀的宝石～">
+									<figcaption>
+										<p>偶像活动Friends!～闪耀的宝石～</p>
+										<p>第6话</p>
+									</figcaption>
+								</figure>
+							</a>
+							<a href="http://www.dilidili.name/anime/pannixingbaiwan2/"  target="_blank">
+								<figure>
+									<img src="http://www.dilidili.name/uploads/allimg/190410/312_1542221981.jpg" alt="叛逆性百万亚瑟王第二季">
+									<figcaption>
+										<p>叛逆性百万亚瑟王第二季</p>
+										<p>第7话</p>
+									</figcaption>
+								</figure>
+							</a>
+						</div>
+					</li>
+					<li class="elmnt-5" style="width: 823px;">
+						<div class="book small">
+							<!--新番周五--->
+							<a href="http://www.dilidili.name/anime/kapian2018/"  target="_blank">
+								<figure>
+									<img src="http://www.dilidili.name/uploads/allimg/190410/312_1812322561.jpg" alt="卡片战斗先导者2018">
+									<figcaption>
+										<p>卡片战斗先导者2018</p>
+									</figcaption>
+								</figure>
+							</a>
+							<a href="http://www.dilidili.name/anime/SARAZANMAI/"  target="_blank">
+								<figure>
+									<img src="http://www.dilidili.name/uploads/allimg/190410/312_1541262241.jpg" alt="皿三昧">
+									<figcaption>
+										<p>皿三昧</p>
+										<p>第6话</p>
+									</figcaption>
+								</figure>
+							</a>
+							<a href="http://www.dilidili.name/anime/wenhaoyequan3/"  target="_blank">
+								<figure>
+									<img src="http://www.dilidili.name/uploads/allimg/190410/312_1732201571.jpg" alt="文豪野犬第三季">
+									<figcaption>
+										<p>文豪野犬第三季</p>
+										<p>第6话</p>
+									</figcaption>
+								</figure>
+							</a>
+							<a href="http://www.dilidili.name/anime/BAKUMATSUCRISIS/"  target="_blank">
+								<figure>
+									<img src="http://www.dilidili.name/uploads/allimg/190410/312_1729162671.jpg" alt="BAKUMATSU CRISIS">
+									<figcaption>
+										<p>BAKUMATSU CRISIS</p>
+										<p>第7话</p>
+									</figcaption>
+								</figure>
+							</a>
+						</div>
+					</li>
+					<li class="elmnt-6" style="width: 823px;">
+						<div class="book small">
+							<a href="http://www.dilidili.name/anime/yamato2202/"  target="_blank">
+								<figure>
+									<img src="http://www.dilidili.name/uploads/allimg/190418/312_1003006241.jpg" alt="宇宙战舰大和号2202 爱的战士们">
+									<figcaption>
+										<p>宇宙战舰大和号2202 爱的战士们</p>
+									</figcaption>
+								</figure>
+							</a>
+							<a href="http://www.dilidili.name/anime/wyxlxzwy/"  target="_blank">
+								<figure>
+									<img src="http://www.dilidili.name/uploads/allimg/190411/312_1114061461.jpg" alt="物语系列selection &amp; 续·终物语">
+									<figcaption>
+										<p>物语系列selection &amp; 续·终物语</p>
+
+									</figcaption>
+
+								</figure>
+							</a>
+							<a href="http://www.dilidili.name/anime/ooxrz/"  target="_blank">
+								<figure>
+									<img src="http://www.dilidili.name/uploads/allimg/190402/312_1701345571.jpg" alt="一个人的OO小日子">
+									<figcaption>
+										<p>一个人的OO小日子</p>
+										<p>第7话</p>
+
+									</figcaption>
+
+								</figure>
+							</a>
+							<a href="http://www.dilidili.name/anime/xzlsdnnqz/"  target="_blank">
+								<figure>
+									<img src="http://www.dilidili.name/uploads/allimg/190411/312_1116599731.jpg" alt="信长老师的年幼妻子">
+									<figcaption>
+										<p>信长老师的年幼妻子</p>
+										<p>第7话</p>
+
+									</figcaption>
+
+								</figure>
+							</a>
+							<a href="http://www.dilidili.name/anime/guimiezhiren/"  target="_blank">
+								<figure>
+									<img src="http://www.dilidili.name/uploads/allimg/190411/312_1124507331.jpg" alt="鬼灭之刃">
+									<figcaption>
+										<p>鬼灭之刃</p>
+										<p>第7话</p>
+
+									</figcaption>
+
+								</figure>
+							</a>
+							<a href="http://www.dilidili.name/anime/MIX/"  target="_blank">
+								<figure>
+									<img src="http://www.dilidili.name/uploads/allimg/190411/312_1130236091.jpg" alt="MIX">
+									<figcaption>
+										<p>MIX</p>
+										<p>第7话</p>
+
+									</figcaption>
+
+								</figure>
+							</a>
+							<a href="http://www.dilidili.name/anime/wmwfyqxx/"  target="_blank">
+								<figure>
+									<img src="http://www.dilidili.name/uploads/allimg/190411/312_1132049201.jpg" alt="我们无法一起学习">
+									<figcaption>
+										<p>我们无法一起学习</p>
+										<p>第7话</p>
+
+									</figcaption>
+
+								</figure>
+							</a>
+							<a href="http://www.dilidili.name/anime/yldqjbnxx/"  target="_blank">
+								<figure>
+									<img src="http://www.dilidili.name/uploads/allimg/190411/312_1133056811.jpg" alt="淫乱的青酱不能学习">
+									<figcaption>
+										<p>淫乱的青酱不能学习</p>
+										<p>第7话</p>
+
+									</figcaption>
+
+								</figure>
+							</a>
+							<a href="http://www.dilidili.name/anime/clsn/"  target="_blank">
+								<figure>
+									<img src="http://www.dilidili.name/uploads/allimg/190411/312_1136536111.jpg" alt="川柳少女">
+									<figcaption>
+										<p>川柳少女</p>
+										<p>第7话</p>
+
+									</figcaption>
+
+								</figure>
+							</a>
+							<a href="http://www.dilidili.name/anime/sglz/"  target="_blank">
+								<figure>
+									<img src="http://www.dilidili.name/uploads/allimg/190411/312_1137271321.jpg" alt="水果篮子">
+									<figcaption>
+										<p>水果篮子</p>
+										<p>第7话</p>
+
+									</figcaption>
+
+								</figure>
+							</a>
+							<a href="http://www.dilidili.name/anime/zoidswild/"  target="_blank">
+								<figure>
+									<img src="http://www.dilidili.name/uploads/allimg/180917/295_1859006771.jpg" alt="ZOIDS WILD">
+									<figcaption>
+										<p>ZOIDS WILD</p>
+									</figcaption>
+								</figure>
+							</a>
+							<a href="http://www.dilidili.name/anime/MIRUTIGHTS/"  target="_blank">
+								<figure>
+									<img src="http://www.dilidili.name/uploads/allimg/190410/312_1815265711.jpg" alt="丝袜视界">
+									<figcaption>
+										<p>丝袜视界</p>
+										<p>第2话</p>
+									</figcaption>
+								</figure>
+							</a>
 						</div>
 					</li>
 				</ul>
 			</div>
 		</div>
-		<div class="divright">
-   			知识是自己的，谁也拿不走的
-		</div>
-	</div>
-	<div class="comment">
-		<textarea id="dome" class="commentArea"></textarea>
-		<button  class="btn btn-primary">发布</button >
-		<div style="clear: both;"></div>
-		<ul class="commentList"></ul>
+
 	</div>
 <script type="text/javascript">
-	$(".btn btn-primary").click(function(){
-		var template = "";
-	    var html = "";
-	    for (var i = 0; i < leaveMessages.length; i++){
-	        template = '<li class="item" id="{id}">';
-	        template += '    <div class="pic">';
-	        template += '        <img src="">';          // 用户头像
-	        template += '    </div>';
-	        template += '    <div class="info">';
-	        template += '        <div class="name">{fullname}</div>';
-	        template += '        <div class="time">{createTime}</div>';
-	        template += '        <div class="content">{content}</div>';
-	        template += '        <div class="userName" style="display: none">{username}</div>';
-	        template += '    </div>';
-	        template += '</li>';
-	 
-	        var timestamp = leaveMessages[i].createTime;           // 时间戳设置为北京时间
-	        leaveMessages[i].createTime = formatDate(timestamp);
-	 
-	        var userimg = leaveMessages[i].headImgUrl;                 // 如果headImgUrl等于null,替换为默认路径
-	        if (userimg == null){
-	            leaveMessages[i].headImgUrl = "headPortrait/default_head_img.png";
-	        }
-	        html = template.formatString(leaveMessages[i]);
-	        $(".commentList").append(html);
-	    }
-	});
+		$("a[class^='id']").each(function(){
+		$(this).click(function(i) {
+						for (var j = 1; j <= 7; j++) {
+							//获取class的name
+							var cls = $(this).prop("className");
+							var clsnm = $(".id"+j).prop("className");
+							if (cls==clsnm ) {
+									$(".elmnt-"+j).css("display","block");
+							} else {
+									$(".elmnt-"+j).css("display","none");
+							}}
+					});
+		})
 </script>
 </body>
 

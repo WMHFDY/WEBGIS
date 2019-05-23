@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>主页</title>
+	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/main.css">
+	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!-- <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script> -->
+	<script src="js/jquery.js">
+	</script>
+</head>
+
+<body>
+	<div id="wai">
+		<div class="divleft">
+			<img class="img-circle" src="images/TX.jpg" width="100px" height="100px" />
+			<a class="mya" href="https://blog.csdn.net/wenming111">会飞的鱼@</a>
+		</div>
+		<div class="">
+			<div class="box">
+				<ul id="first-list">
+					<li>
+						<span></span>
+						<div class="title">comment #01</div>
+						<div class="info">前期学习</div>
+						<div class="name">- 设计 -</div>
+						<div class="time">
+							<span>Apr, 17<sup>th</sup></span>
+							<span>12:00 AM</span>
+						</div>
+					</li>
+					<li>
+						<span></span>
+						<div class="title">comment #01</div>
+						<div class="info">在师兄的指导下不断的积累知识，加速成长</div>
+						<div class="name">- 知识积累 -</div>
+						<div class="time">
+							<span>Apr, 29<sup>th</sup></span>
+							<span>11:36 AM</span>
+						</div>
+					</li>
+					<li>
+						<span></span>
+						<div class="title">comment #02</div>
+						<div class="info">知识来源于实践</div>
+						<div class="name">- 实践 -</div>
+						<div class="time">
+							<span>May, 2<sup>nd</sup></span>
+							<span>02:00 PM</span>
+						</div>
+					</li>
+					<li>
+						<span></span>
+						<div class="title">comment #03</div>
+						<div class="info">webgis实践</div>
+						<div class="name">- webgis实践 -</div>
+						<div class="time">
+							<span>MAR, 21<sup>st</sup></span>
+							<span>03:49 PM</span>
+						</div>
+					</li>
+					<li>
+						<span></span>
+						<div class="title">summery #03</div>
+						<div class="info">有能拿出手的知识，能实际完成一定难度的项目</div>
+						<div class="name">- 实战 -</div>
+						<div class="time">
+							<span>JUL, 13<sup>rd</sup></span>
+							<span>09:23 AM</span>
+						</div>
+					</li>
+					<li>
+						<span></span>
+						<div class="title">comment #04</div>
+						<div class="info">应聘</div>
+						<div class="name">- get offer -</div>
+						<div class="time">
+							<span>JUL, 15<sup>th</sup></span>
+							<span>08:30 PM</span>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="divright">
+   			知识是自己的，谁也拿不走的
+		</div>
+	</div>
+	<div class="comment">
+		<textarea id="dome" class="commentArea"></textarea>
+		<button  class="btn btn-primary">发布</button >
+		<div style="clear: both;"></div>
+		<ul class="commentList"></ul>
+	</div>
+<script type="text/javascript">
+	$(".btn btn-primary").click(function(){
+		var template = "";
+	    var html = "";
+	    for (var i = 0; i < leaveMessages.length; i++){
+	        template = '<li class="item" id="{id}">';
+	        template += '    <div class="pic">';
+	        template += '        <img src="">';          // 用户头像
+	        template += '    </div>';
+	        template += '    <div class="info">';
+	        template += '        <div class="name">{fullname}</div>';
+	        template += '        <div class="time">{createTime}</div>';
+	        template += '        <div class="content">{content}</div>';
+	        template += '        <div class="userName" style="display: none">{username}</div>';
+	        template += '    </div>';
+	        template += '</li>';
+	 
+	        var timestamp = leaveMessages[i].createTime;           // 时间戳设置为北京时间
+	        leaveMessages[i].createTime = formatDate(timestamp);
+	 
+	        var userimg = leaveMessages[i].headImgUrl;                 // 如果headImgUrl等于null,替换为默认路径
+	        if (userimg == null){
+	            leaveMessages[i].headImgUrl = "headPortrait/default_head_img.png";
+	        }
+	        html = template.formatString(leaveMessages[i]);
+	        $(".commentList").append(html);
+	    }
+	});
+</script>
+</body>
+
+</html>
