@@ -159,8 +159,8 @@
 		<div class="MON">
 			<div class="sldr">
 				<ul class="wrp animate">
-					<li class="elmnt-7" style="width: 823px;">
-						<div class="book small">
+					<li class="elmnt-7 row" style="width: 823px;">
+						<div class="col-md-12">
 							<a href="http://www.dilidili.name/anime/pokemontyyl/" target="_blank">
 								<figure>
 									<img src="http://www.dilidili.name/uploads/allimg/190411/312_1446436511.jpg" alt="宠物小精灵太阳/月亮">
@@ -397,7 +397,6 @@
 					</li>
 					<li class="elmnt-2" style="width: 823px;">
 						<div class="book small">
-
 							<!--新番周二--->
 							<a href="http://www.dilidili.name/anime/blackclover/" target="_blank">
 								<figure>
@@ -410,7 +409,8 @@
 									<span class="hot">NEW</span>
 
 								</figure>
-							</a><a href="http://www.dilidili.name/anime/zswpact2/" target="_blank">
+							</a>
+							<a href="http://www.dilidili.name/anime/zswpact2/" target="_blank">
 								<figure>
 									<img src="http://www.dilidili.name/uploads/allimg/190409/312_1817453491.jpg" alt="钻石王牌actⅡ">
 									<figcaption>
@@ -421,7 +421,8 @@
 									<span class="hot">NEW</span>
 
 								</figure>
-							</a><a href="http://www.dilidili.name/anime/CLIMAXSEASON/" target="_blank">
+							</a>
+							<a href="http://www.dilidili.name/anime/CLIMAXSEASON/" target="_blank">
 								<figure>
 									<img src="http://www.dilidili.name/uploads/allimg/190410/312_1038481691.jpg" alt="偶像大师：灰姑娘女孩剧场 CLIMAX SEASON">
 									<figcaption>
@@ -432,7 +433,8 @@
 									<span class="hot">NEW</span>
 
 								</figure>
-							</a><a href="http://www.dilidili.name/anime/YUNO/" target="_blank">
+							</a>
+							<a href="http://www.dilidili.name/anime/YUNO/" target="_blank">
 								<figure>
 									<img src="http://www.dilidili.name/uploads/allimg/190410/312_1042166871.jpg" alt="在世界尽头咏唱恋曲的少女YU-NO">
 									<figcaption>
@@ -443,7 +445,8 @@
 									<span class="hot">NEW</span>
 
 								</figure>
-							</a><a href="http://www.dilidili.name/anime/ysjscz/" target="_blank">
+							</a>
+							<a href="http://www.dilidili.name/anime/ysjscz/" target="_blank">
 								<figure>
 									<img src="http://www.dilidili.name/uploads/allimg/190410/312_1047256871.jpg" alt="异世界四重奏">
 									<figcaption>
@@ -796,6 +799,7 @@
 
 	</div>
 <script type="text/javascript">
+    //点击星期一到星期日按钮的事件
 		$("a[class^='id']").each(function(){
 		$(this).click(function(i) {
 						for (var j = 1; j <= 7; j++) {
@@ -809,6 +813,9 @@
 							}}
 					});
 		})
+    //控制布局
+		$("form input")
+
 </script>
 </body>
 
