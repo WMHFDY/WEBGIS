@@ -15,9 +15,24 @@
 		.book{
        display:flex;
 			 flex-direction: row;
+			 /* flex布局中一行满之后的处理方法 */
 			 flex-wrap:wrap;
 		}
-
+		/* 选择class同时为book和small的节点下第一个子节点为a的节点. */
+		/* 使a具有div效果的方法：使用display设置为block */
+    .book.small>a{
+			display:block;
+		  /* margin-right: 33px; */
+			width:141px;
+			height:100%;
+    }
+		/* 选class同时为book和small节点下匹配的所有子节点 */
+  .book.small p{
+  		width:109px;
+  }
+	.MON{
+		margin-top: 10px;
+	}
 	</style>
 </head>
 
@@ -30,6 +45,7 @@
 
 			<div class="row" id="sc_menu">
 				<div class="col-md-12">
+
 					<ul class="nav nav-pills">
 						<li class="active">
 							<a href="#">首页</a>
@@ -113,6 +129,7 @@
 
 		<div class="row">
 			<div class="col-md-8">
+				<!-- 需要把标签改成胶囊的样式，只需要使用 class .nav-pills 代替 .nav-tabs 即可 -->
 				<ul class="nav nav-tabs">
 					<li class="active">
 						<a class="id1" target="_self">周一</a>
@@ -162,9 +179,9 @@
 					</li>
 				</ul>
 			</div>
-
 		</div>
 		<div class="MON row">
+			<!-- 页面左侧图片+文字显示页 -->
 			<div class="sldr col-md-8">
 				<ul class="wrp animate ">
 					<li class="elmnt-7 " style="width: 823px;">
@@ -804,6 +821,7 @@
 					</li>
 				</ul>
 			</div>
+			<!-- 周一到周日的右侧导航页 -->
 			<div class="sldr col-md-4">
           <ul class="wrp animate">
 							<li class="cdelmnt-7" style="width: 290px;">
@@ -984,7 +1002,7 @@
 	</div>
 <script type="text/javascript">
 	$(".sldr img").css({"width":"85.5px","height":"85.5px"})
-
+  $(".nav li").addClass("active")
     //点击星期一到星期日按钮的事件
 		$("a[class^='id']").each(function(){
 		$(this).click(function() {
