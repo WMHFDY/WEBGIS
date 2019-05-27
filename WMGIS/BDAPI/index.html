@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=l1XfcKR8gADHGEg1QjGWbZlZLunr8FQj"></script>  	
+</head>
+<body>
+	<div id="allmap"></div>
+ <script type="text/javascript">
+ 	var map = new BMap.Map("allmap");          // 创建地图实例
+	var point = new BMap.Point(120.391655,36.067588);  // 创建点坐标
+	map.centerAndZoom(point, 15);
+	map.addControl(new BMap.NavigationControl());//缩放平移控件
+	map.addControl(new BMap.ScaleControl());    //比例尺
+	map.addControl(new BMap.OverviewMapControl());//缩略图
+	map.addControl(new BMap.MapTypeControl()); //地图类型
+	map.setCurrentCity("青岛");
+ </script>
+</body>
+</html>
