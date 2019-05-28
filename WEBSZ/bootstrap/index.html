@@ -136,6 +136,7 @@
 		</div>
 	</div>
 	<script type="text/javascript">
+		//点击登陆注册时弹出对话框
 		$(".denglu").click(function() {
 			$(".login_form").css('display', 'block'); //表示设置为可用
 			$(".cd-user").css("visibility","visible");
@@ -149,6 +150,21 @@
 			$(".login_form").css('display', 'none'); //表示设置为可用
 			$(".cd-user").css("visibility","hidden");
          });
+
+        //点击空白处登录注册关闭
+         var isClick = true;
+            $('.login_form').click(function(){
+            	isClick = false;
+            });
+          $(".cd-user").click(function(){
+          	// 判断cd-user下的元素是否点击
+            if (isClick){
+            	 $(".login_form").css('display', 'none');
+            	  //表示设置为可用
+		  		 $(".cd-user").css("visibility","hidden");
+            }
+            isClick = true;
+          });
 
 
 		$("#login_in").click(function() {
@@ -174,6 +190,20 @@
 				function(data, status) {
 					alert("数据: " + data + "\n状态: " + status);
 				});
+		});
+
+
+		$(function(){
+            var yhm = $.cookie('register_user');
+    　　　　   var mm = $.cookie('register_password');
+       
+      //页面加载的时候从cookie中取出用户名和密码填充对应的输入框
+       $('#register_user').val(yhm);   　　　　  
+       $("#register_password").val(mm)
+       //选中保存秘密的复选框　
+    　　　　if(yhm != null && yhm != '' && mm != null && mm != ''){
+    	
+		}
 		});
 	</script>
 </body>
