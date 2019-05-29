@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Bootstrap 实例 - 内联子标题</title>
+	<link rel="stylesheet" href="css/index.css" />
+	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<style type="text/css">
+		@-webkit-keyframes rotation {
+			from {
+				-webkit-transform: rotate(0deg);
+			}
+
+			to {
+				-webkit-transform: rotate(360deg);
+			}
+		}
+
+		@-ms-keyframes rotation {
+			from {
+				-ms-transform: rotate(0deg);
+			}
+
+			to {
+				-ms-transform: rotate(360deg);
+			}
+		}
+
+		#rotation {
+			-webkit-transform: rotate(360deg);
+			-webkit-animation: rotation 5s linear infinite;
+			/* Safari and Chrome */
+			-ms-transform: rotate(360deg);
+			-ms-animation: rotation 5s linear infinite;
+			/* IE 9 */
+			animation: rotation 5s linear infinite;
+			-moz-animation: rotation 5s linear infinite;
+			/* Firefox */
+			-o-animation: rotation 5s linear infinite;
+			/* Opera */
+		}
+
+		.innerRota {
+			width: 50px;
+			height: 50px;
+			position: absolute;
+			top: 25%;
+			left: 25%;
+		}
+
+		.outRota {
+			/* background: #F8CBAD; */
+			width: 100px;
+			height: 100px;
+			position: relative;
+			margin-top: 15%;
+			margin-left: 44%;
+			z-index: 1；
+		}
+	</style>
+</head>
+<body>
+	<!-- container 里面写其他东西，不至于挨边。影响美观。 -->
+	<div class="container">
+		<div class="row">
+			<img class="about" src="images/question.png" width="15px" height="15px" />
+			<span class="sp1">
+				<a class="denglu" style="float:left">登录</a>
+				<a class="zhuce" style="float:Right">注册</a>
+			</span>
+		</div>
+		<div class="row">
+			<div class="outRota">
+				<div class="innerRota">
+					<img class="img-rounded" src="images/inner.png" width="50" height="50" z-index="1" />
+				</div>
+				<img class="img-circle" style="background-color:#fff0" id="rotation" src="images/out.png" width="100" height="100" z-index="2" />
+			</div>
+		</div>
+		<div class="div3">
+			<p class="sys">大学学习系统</p>
+		</div>
+		<div class="div4">
+			<hr />
+			<span class="sp2">
+				<ul class="list-group">
+					<!-- href必须为“” 不能使用‘’ -->
+					<li class="list-group-item"><a href="main.html">主页</a></li>
+					<li class="list-group-item"><a href="http://www.aust.edu.cn/xxgk/xxjj.htm">关于大学</a></li>
+					<li class="list-group-item"><a href="comment.html">开发人员</a></li>
+				</ul>
+			</span>
+		</div>
+		<div class="cd-user">
+			<div class="login_form">
+				<!-- "javascript:;"防止链接跳转 -->
+				<a href="javascript:;" class="cd-close-form">关闭</a>
+				<ul id="myTab" class="nav nav-tabs">
+					<li class="active">
+						<a href="#login" data-toggle="tab">
+							登陆
+						</a>
+					</li>
+					<li><a href="#register" data-toggle="tab">注册</a></li>
+				</ul>
+				<div id="myTabContent" class="tab-content">
+					<div class="tab-pane fade in active" id="login">
+						<label class="input_val">
+							<label for="user" style="display:inline;">账户：</label>
+							<input class="form-control" id="user" type="text" style="display:inline;width:200px;" autocomplete="off" />
+						</label>
+						<label class="input_val">
+							<label for="password" style="display:inline;">
+								密码：</label>
+							<input class="form-control" id="login_password" name="password" style="display:inline;width:200px;" type="password" autocomplete="off" />
+						</label>
+						<button class='btn btn-primary' id="login_in" type="submit">登&nbsp;&nbsp;&nbsp;&nbsp;录</button>
+					</div>
+					<div class="tab-pane fade" id="register">
+						<label class="input_val">
+							<label for="user" style="display:inline;">账户：</label>
+							<input class="form-control" id="register_user" type="text" style="display:inline;width:200px;" autocomplete="off" />
+						</label>
+						<label class="input_val">
+							<label for="password" style="display:inline;">
+								密码：</label>
+							<input class="form-control" id="register_password" name="password" style="display:inline;width:200px;" type="password" autocomplete="off" />
+						</label>
+						<button class='btn btn-primary' id="register_in" type="submit">注&nbsp;&nbsp;&nbsp;&nbsp;册</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		//点击登陆注册时弹出对话框
+		$(".denglu").click(function() {
+			$(".login_form").css('display', 'block'); //表示设置为可用
+			$(".cd-user").css("visibility","visible");
+		});
+		$(".zhuce").click(function() {
+			$(".login_form").css('display', 'block'); //表示设置为可用
+			$(".cd-user").css("visibility","visible");
+		});
+
+         $(".cd-close-form").click(function(){
+			$(".login_form").css('display', 'none'); //表示设置为可用
+			$(".cd-user").css("visibility","hidden");
+         });
+
+        //点击空白处登录注册关闭
+         var isClick = true;
+            $('.login_form').click(function(){
+            	isClick = false;
+            });
+          $(".cd-user").click(function(){
+          	// 判断cd-user下的元素是否点击
+            if (isClick){
+            	 $(".login_form").css('display', 'none');
+            	  //表示设置为可用
+		  		 $(".cd-user").css("visibility","hidden");
+            }
+            isClick = true;
+          });
+
+
+		$("#login_in").click(function() {
+			var name = document.getElementById("user").value;
+			var password = document.getElementById("login_password").value;
+			$.post("./user/login", {
+					username: name,
+					pwd: password
+				},
+				function(data, status) {
+					alert("数据: " + data + "\n状态: " + status);
+				});
+		});
+
+
+		$("#register_in").click(function() {
+			var name = document.getElementById("register_user").value;
+			var password = document.getElementById("register_password").value;
+			$.post("./user/regist", {
+					username: name,
+					pwd: password
+				},
+				function(data, status) {
+					alert("数据: " + data + "\n状态: " + status);
+				});
+		});
+
+
+		$(function(){
+            var yhm = $.cookie('register_user');
+    　　　　   var mm = $.cookie('register_password');
+       
+      //页面加载的时候从cookie中取出用户名和密码填充对应的输入框
+       $('#register_user').val(yhm);   　　　　  
+       $("#register_password").val(mm)
+       //选中保存秘密的复选框　
+    　　　　if(yhm != null && yhm != '' && mm != null && mm != ''){
+    	
+		}
+		});
+	</script>
+</body>
+
+</html>
