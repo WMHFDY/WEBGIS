@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
 	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://cdn.staticfile.org/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
 	<style type="text/css">
 		@-webkit-keyframes rotation {
 			from {
@@ -62,6 +63,7 @@
 		}
 	</style>
 </head>
+
 <body>
 	<!-- container 里面写其他东西，不至于挨边。影响美观。 -->
 	<div class="container">
@@ -136,19 +138,35 @@
 		</div>
 	</div>
 	<script type="text/javascript">
+		//点击登陆注册时弹出对话框
 		$(".denglu").click(function() {
 			$(".login_form").css('display', 'block'); //表示设置为可用
-			$(".cd-user").css("visibility","visible");
+			$(".cd-user").css("visibility", "visible");
 		});
 		$(".zhuce").click(function() {
 			$(".login_form").css('display', 'block'); //表示设置为可用
-			$(".cd-user").css("visibility","visible");
+			$(".cd-user").css("visibility", "visible");
 		});
 
-         $(".cd-close-form").click(function(){
+		$(".cd-close-form").click(function() {
 			$(".login_form").css('display', 'none'); //表示设置为可用
-			$(".cd-user").css("visibility","hidden");
-         });
+			$(".cd-user").css("visibility", "hidden");
+		});
+
+		//点击空白处登录注册关闭
+		var isClick = true;
+		$('.login_form').click(function() {
+			isClick = false;
+		});
+		$(".cd-user").click(function() {
+			// 判断cd-user下的元素是否点击
+			if (isClick) {
+				$(".login_form").css('display', 'none');
+				//表示设置为可用
+				$(".cd-user").css("visibility", "hidden");
+			}
+			isClick = true;
+		});
 
 
 		$("#login_in").click(function() {
@@ -159,11 +177,15 @@
 					pwd: password
 				},
 				function(data, status) {
+					if (data.Status === 'success') {
+						window.location.href = "main.html";
+					} else {
 					alert("数据: " + data + "\n状态: " + status);
+				}
 				});
 		});
 
-
+		//$.get $.post是简单易用的高层实现，我们使用$.get $.post方法，jQuery会自动封装调用底层的$.ajax。
 		$("#register_in").click(function() {
 			var name = document.getElementById("register_user").value;
 			var password = document.getElementById("register_password").value;
@@ -171,10 +193,46 @@
 					username: name,
 					pwd: password
 				},
+				//回调函数
 				function(data, status) {
-					alert("数据: " + data + "\n状态: " + status);
+					if (data.Status === 'success') {
+						window.location.href = "main.html";
+					} else {
+						alert("数据: " + data + "\n状态: " + status);
+
+					}
+
 				});
 		});
+		//访问的时候使用$.cookie('name')
+		//$.ajax 是 jQuery 底层 AJAX 实现，$.ajax是一种通用的底层封装
+		// var configObj = {
+		// method //数据的提交方式：get和post
+		// url //数据的提交路径
+		// async //是否支持异步刷新，默认是true
+		// data //需要提交的数据
+		// dataType //服务器返回数据的类型，例如xml,String,Json等
+		// success //请求成功后的回调函数
+		// error //请求失败后的回调函数
+		// }
+
+		// $.ajax({
+		// 	type: "POST", //数据的提交方式：get和post
+		// 	url: "./user/login", //数据的提交路径
+		// 	data: {
+		// 		username: name,
+		// 		pwd: password
+		// 	},
+		// 	contentType: "application/json;charset=utf-8",
+		// 	success: function(msg) {
+		// 		var test = msg;
+		// 		var test2 = test;
+		// 	},
+		// 	error: function(e) {
+		// 		var test = e;
+		// 		var test2 = test;
+		// 	}
+		// });
 	</script>
 </body>
 
