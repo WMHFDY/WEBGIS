@@ -71,7 +71,7 @@
 			<img class="about" src="images/question.png" width="15px" height="15px" />
 			<span class="sp1">
 				<a class="denglu" style="float:left">登录</a>
-				<a class="zhuce" style="float:Right">注册</a>
+				<a class="zhuce" style="float:right">注册</a>
 			</span>
 		</div>
 		<div class="row">
@@ -177,7 +177,7 @@
 					pwd: password
 				},
 				function(data, status) {
-					if (data.Status === 'success') {
+					if (status === 'success') {
 						window.location.href = "main.html";
 					} else {
 					alert("数据: " + data + "\n状态: " + status);
@@ -195,7 +195,7 @@
 				},
 				//回调函数
 				function(data, status) {
-					if (data.Status === 'success') {
+					if (status === 'success') {
 						window.location.href = "main.html";
 					} else {
 						alert("数据: " + data + "\n状态: " + status);
