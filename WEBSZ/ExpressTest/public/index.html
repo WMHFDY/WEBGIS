@@ -61,6 +61,14 @@
 			margin-left: 44%;
 			z-index: 1；
 		}
+
+		.cd-username {
+    		background-image: url(images/cd-icon-username.svg);
+    		display: inline-block;
+		    position: absolute;
+		    left: 15px;
+		    top: 50%;
+		    bottom: auto;
 	</style>
 </head>
 
@@ -108,7 +116,33 @@
 					</li>
 					<li><a href="#register" data-toggle="tab">注册</a></li>
 				</ul>
-				<div id="myTabContent" class="tab-content">
+				<form class="form-inline" id="login">
+					<div class="form-group">
+						<label class="cd-username"></label>
+						<input type="user" class="form-control" placeholder="账号">
+					</div>
+					<div class="form-group">
+						<label class="sr-only"></label>
+						<input type="password" class="form-control" placeholder="密码">
+					</div>
+				</form>
+				<form class="form-inline" id="register">
+					<div class="form-group">
+						<label class="cd-username"></label>
+						<input type="user" class="form-control" placeholder="账号">
+					</div>
+					<div class="form-group">
+						<label class="sr-only"></label>
+						<input type="password" class="form-control" placeholder="密码">
+					</div>
+					<div class="form-group">
+						<label class="sr-only"></label>
+						<input type="password" class="form-control" placeholder="重复密码">
+					</div>
+				</form>
+				<button class='btn btn-primary' id="login_in" type="submit">登&nbsp;&nbsp;&nbsp;&nbsp;录</button>
+				
+				<!-- <div id="myTabContent" class="tab-content">
 					<div class="tab-pane fade in active" id="login">
 						<label class="input_val">
 							<label for="user" style="display:inline;">账户：</label>
@@ -131,9 +165,14 @@
 								密码：</label>
 							<input class="form-control" id="register_password" name="password" style="display:inline;width:200px;" type="password" autocomplete="off" />
 						</label>
+						<label class="input_val">
+							<label for="password" style="display:inline;">
+								重复密码：</label>
+							<input class="form-control" id="register_password" name="password" style="display:inline;width:200px;" type="password" autocomplete="off" />
+						</label>
 						<button class='btn btn-primary' id="register_in" type="submit">注&nbsp;&nbsp;&nbsp;&nbsp;册</button>
 					</div>
-				</div>
+				</div> -->
 			</div>
 		</div>
 	</div>
